@@ -8,32 +8,32 @@
 <meta property="og:title" content="Brendan Chick, CSCS | Football Strength & Conditioning Coach" />
 <meta property="og:description" content="Division I team responsibility. Power Conference football experience. Relentless work ethic." />
 <meta property="og:type" content="website" />
-<meta name="theme-color" content="#0E1117" />
+<meta name="theme-color" content="#FFFFFF" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg:           #0E1117;
-    --bg-2:         #12161F;
-    --panel:        #161B26;
-    --panel-2:      #1B2230;
-    --line:         rgba(255,255,255,0.07);
-    --line-strong:  rgba(255,255,255,0.12);
-    --line-bright:  rgba(255,255,255,0.20);
-    --ink:          #F2F4F8;
-    --ink-2:        #C9CDD6;
-    --ink-mute:     #8A91A0;
-    --ink-dim:      #5C6373;
-    --accent:       #FF7A45;
-    --accent-warm:  #FF9466;
-    --accent-deep:  #E55A1F;
-    --accent-tint:  rgba(255,122,69,0.12);
-    --accent-soft:  rgba(255,122,69,0.18);
-    --green:        #4ADE80;
-    --green-tint:   rgba(74,222,128,0.10);
-    --radius:       10px;
-    --sidebar-w:    280px;
+    --bg:           #FFFFFF;
+    --bg-2:         #F8F7F4;
+    --panel:        #F4F2EE;
+    --panel-2:      #ECEAE4;
+    --line:         rgba(0,0,0,0.09);
+    --line-strong:  rgba(0,0,0,0.14);
+    --line-bright:  rgba(0,0,0,0.24);
+    --ink:          #141414;
+    --ink-2:        #383838;
+    --ink-mute:     #686868;
+    --ink-dim:      #9A9A9A;
+    --accent:       #B84A18;
+    --accent-warm:  #CC5822;
+    --accent-deep:  #8F380F;
+    --accent-tint:  rgba(184,74,24,0.07);
+    --accent-soft:  rgba(184,74,24,0.15);
+    --green:        #1A6B3C;
+    --green-tint:   rgba(26,107,60,0.09);
+    --radius:       6px;
+    --sidebar-w:    220px;
     --content-max:  860px;
   }
   * { box-sizing: border-box; }
@@ -53,38 +53,34 @@
     text-rendering: optimizeLegibility;
   }
   a { color: inherit; text-decoration: none; }
-  ::selection { background: var(--accent); color: #0E1117; }
-  code, kbd, pre { font-family: "JetBrains Mono", ui-monospace, monospace; }
+  ::selection { background: var(--accent); color: #fff; }
 
   /* Top bar */
   .topbar {
     position: sticky; top: 0; z-index: 40;
-    background: rgba(14,17,23,0.85);
-    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.94);
+    backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--line);
   }
   .topbar-inner {
     display: flex; align-items: center; justify-content: space-between;
-    padding: 14px 28px; max-width: 1400px; margin: 0 auto;
+    padding: 13px 28px; max-width: 1400px; margin: 0 auto;
   }
-  .top-brand { display: flex; align-items: center; gap: 14px; }
-  .top-logo {
-    display: flex; align-items: center; justify-content: center;
-    width: 30px; height: 30px; border-radius: 7px;
-    background: linear-gradient(135deg, var(--accent), var(--accent-deep));
-    color: #FFF; font-weight: 800; font-size: 13px; letter-spacing: -0.02em;
-    box-shadow: 0 4px 12px -4px rgba(255,122,69,0.5);
+  .top-brand { display: flex; align-items: center; gap: 0; }
+  .top-name { font-weight: 700; font-size: 15px; color: var(--ink); letter-spacing: -0.01em; }
+  .top-cred {
+    font-size: 13px; color: var(--ink-mute); font-weight: 400;
+    margin-left: 14px; padding-left: 14px;
+    border-left: 1px solid var(--line-strong);
   }
-  .top-brand-text { font-weight: 700; font-size: 15px; color: var(--ink); letter-spacing: -0.01em; }
-  .top-divider { color: var(--ink-dim); font-weight: 300; padding: 0 4px; }
-  .top-nav { display: flex; gap: 4px; }
+  .top-nav { display: flex; gap: 2px; margin-left: 28px; }
   .top-nav a {
-    padding: 6px 14px; border-radius: 6px; font-size: 14px;
+    padding: 5px 12px; border-radius: 5px; font-size: 13.5px;
     color: var(--ink-mute); font-weight: 500;
-    transition: color 160ms ease, background 160ms ease;
+    transition: color 150ms ease, background 150ms ease;
   }
   .top-nav a:hover { color: var(--ink); }
-  .top-nav a.active { background: var(--accent-tint); color: var(--accent); }
+  .top-nav a.active { color: var(--accent); }
   .top-cta { display: flex; align-items: center; gap: 8px; }
   .mobile-toggle { display: none; }
 
@@ -95,110 +91,95 @@
 
   /* Sidebar */
   .sidebar {
-    position: sticky; top: 60px; align-self: start;
-    height: calc(100vh - 60px); overflow-y: auto;
-    padding: 32px 20px 32px 28px;
+    position: sticky; top: 57px; align-self: start;
+    height: calc(100vh - 57px); overflow-y: auto;
+    padding: 28px 16px 28px 24px;
     border-right: 1px solid var(--line);
   }
-  .sidebar::-webkit-scrollbar { width: 6px; }
-  .sidebar::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 3px; }
-  .nav-group { margin-bottom: 24px; }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 2px; }
+  .nav-group { margin-bottom: 26px; }
   .nav-group-label {
-    font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--ink-mute); padding: 0 10px 10px;
+    font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-dim); padding: 0 6px 8px;
   }
   .nav ul { list-style: none; padding: 0; margin: 0; }
   .nav a {
-    display: block; padding: 7px 12px; border-radius: 6px;
-    color: var(--ink-mute); font-size: 14px; font-weight: 500;
-    transition: color 160ms ease, background 160ms ease;
+    display: block; padding: 5px 6px; border-radius: 4px;
+    color: var(--ink-mute); font-size: 13px; font-weight: 500;
+    transition: color 150ms ease;
   }
-  .nav a:hover { color: var(--ink); background: rgba(255,255,255,0.03); }
-  .nav a.active { color: var(--accent); background: var(--accent-tint); }
+  .nav a:hover { color: var(--ink); }
+  .nav a.active { color: var(--accent); font-weight: 600; }
 
-  .sidebar-footer { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); }
+  .sidebar-footer { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line); }
   .badge {
     display: inline-flex; align-items: center; gap: 6px;
-    padding: 4px 10px;
-    border: 1px solid rgba(74,222,128,0.30);
+    padding: 3px 9px;
+    border: 1px solid rgba(26,107,60,0.22);
     border-radius: 999px;
     background: var(--green-tint);
-    font-size: 11px; font-weight: 600; letter-spacing: 0.04em;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.02em;
     color: var(--green);
   }
   .badge::before {
-    content: ""; width: 6px; height: 6px; border-radius: 50%;
-    background: var(--green); box-shadow: 0 0 8px var(--green);
+    content: ""; width: 5px; height: 5px; border-radius: 50%;
+    background: var(--green);
   }
-  .sidebar-footer p { margin: 12px 0 0; font-size: 12px; color: var(--ink-dim); line-height: 1.5; }
+  .sidebar-footer p { margin: 8px 0 0; font-size: 11.5px; color: var(--ink-dim); line-height: 1.5; }
 
   /* Buttons */
   .btn {
-    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-    padding: 8px 14px; border-radius: 7px;
+    display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+    padding: 8px 16px; border-radius: 6px;
     font-size: 13px; font-weight: 600; letter-spacing: 0.01em;
     border: 1px solid transparent; cursor: pointer; white-space: nowrap;
-    transition: transform 120ms ease, background 160ms ease, border-color 160ms ease, color 160ms ease, box-shadow 160ms ease;
+    transition: transform 100ms ease, background 150ms ease, border-color 150ms ease, color 150ms ease;
   }
   .btn:active { transform: translateY(1px); }
-  .btn-accent {
-    background: var(--accent); color: #0E1117;
-    box-shadow: 0 4px 14px -4px rgba(255,122,69,0.5);
-  }
+  .btn-accent { background: var(--accent); color: #fff; }
   .btn-accent:hover { background: var(--accent-warm); }
-  .btn-ghost {
-    background: var(--panel); color: var(--ink-2); border-color: var(--line-strong);
-  }
-  .btn-ghost:hover { color: var(--ink); border-color: var(--line-bright); background: var(--panel-2); }
-  .btn-lg { padding: 11px 18px; font-size: 14px; border-radius: 8px; }
-  .btn .arrow { transition: transform 200ms ease; display: inline-block; }
+  .btn-ghost { background: var(--bg); color: var(--ink-2); border-color: var(--line-strong); }
+  .btn-ghost:hover { color: var(--ink); border-color: var(--line-bright); }
+  .btn-lg { padding: 10px 20px; font-size: 14px; border-radius: 7px; }
+  .btn .arrow { transition: transform 180ms ease; display: inline-block; }
   .btn:hover .arrow { transform: translateX(3px); }
 
   /* Content */
-  .content { padding: 56px 56px 80px; }
+  .content { padding: 52px 52px 80px; }
   .container { max-width: var(--content-max); }
-  section { scroll-margin-top: 80px; padding: 56px 0; }
+  section { scroll-margin-top: 76px; padding: 52px 0; }
   section:first-of-type { padding-top: 8px; }
   section + section { border-top: 1px solid var(--line); }
 
   .sec-eyebrow {
-    display: inline-flex; align-items: center; gap: 8px;
-    font-size: 12px; color: var(--accent); margin-bottom: 14px; font-weight: 500;
-  }
-  .sec-eyebrow code {
-    padding: 2px 8px;
-    background: var(--accent-tint);
-    border: 1px solid var(--accent-soft);
-    border-radius: 5px;
-    font-size: 11px;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 12px;
   }
 
   h1, h2, h3, h4 {
     font-family: "Inter", sans-serif; color: var(--ink); margin: 0;
     letter-spacing: -0.022em; font-weight: 700;
   }
-  h1 { font-size: clamp(36px, 4.6vw, 52px); line-height: 1.05; letter-spacing: -0.03em; font-weight: 800; }
-  h2 { font-size: clamp(26px, 2.6vw, 32px); line-height: 1.15; margin-bottom: 16px; }
-  h3 { font-size: 17px; line-height: 1.3; font-weight: 600; }
+  h1 { font-size: clamp(34px, 4.2vw, 50px); line-height: 1.06; letter-spacing: -0.03em; font-weight: 800; }
+  h2 { font-size: clamp(24px, 2.4vw, 30px); line-height: 1.15; margin-bottom: 16px; }
+  h3 { font-size: 16px; line-height: 1.3; font-weight: 600; }
   h4 { font-size: 14px; font-weight: 600; }
 
   p { margin: 0 0 14px; color: var(--ink-2); }
 
   /* Hero */
-  .hero { padding-top: 24px; }
+  .hero { padding-top: 20px; }
   .hero-eyebrow {
-    display: inline-flex; align-items: center; gap: 10px;
-    font-family: "JetBrains Mono", monospace;
-    font-size: 12px; color: var(--accent);
-    margin-bottom: 20px; padding: 4px 10px;
-    border: 1px solid var(--accent-soft); border-radius: 5px;
-    background: var(--accent-tint);
+    display: block;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 16px;
   }
-  .hero h1 { margin-bottom: 22px; }
+  .hero h1 { margin-bottom: 20px; }
   .hero-sub {
-    font-size: clamp(18px, 2vw, 22px); line-height: 1.4;
-    color: var(--ink); font-weight: 500; max-width: 36ch;
-    margin: 0 0 28px; padding-left: 16px;
+    font-size: clamp(17px, 1.8vw, 20px); line-height: 1.45;
+    color: var(--ink); font-weight: 500; max-width: 38ch;
+    margin: 0 0 26px; padding-left: 16px;
     border-left: 2px solid var(--accent);
     letter-spacing: -0.005em;
   }
@@ -208,62 +189,52 @@
 
   .hero-stats {
     display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px; margin-top: 40px;
+    gap: 10px; margin-top: 36px;
   }
   .stat-card {
     background: var(--panel); border: 1px solid var(--line);
     border-radius: var(--radius); padding: 16px 18px;
-    transition: border-color 200ms ease, transform 200ms ease;
+    transition: border-color 180ms ease;
   }
-  .stat-card:hover { border-color: var(--line-bright); transform: translateY(-2px); }
+  .stat-card:hover { border-color: var(--line-bright); }
   .stat-label {
-    font-family: "JetBrains Mono", monospace;
     font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.10em;
-    color: var(--accent); margin-bottom: 8px; font-weight: 500;
+    color: var(--ink-mute); margin-bottom: 6px; font-weight: 600;
   }
-  .stat-value { font-size: 17px; line-height: 1.25; color: var(--ink); margin-bottom: 4px; font-weight: 700; letter-spacing: -0.015em; }
+  .stat-value { font-size: 16px; line-height: 1.25; color: var(--ink); margin-bottom: 3px; font-weight: 700; letter-spacing: -0.015em; }
   .stat-detail { font-size: 13px; color: var(--ink-mute); line-height: 1.45; }
 
   /* Cards */
-  .card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
   .card-grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .card {
     background: var(--panel); border: 1px solid var(--line);
-    border-radius: var(--radius); padding: 20px;
-    transition: border-color 200ms ease, transform 200ms ease;
+    border-radius: var(--radius); padding: 18px 20px;
+    transition: border-color 180ms ease;
   }
-  .card:hover { border-color: var(--line-bright); transform: translateY(-2px); }
-  .card-num {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 10.5px; letter-spacing: 0.10em; text-transform: uppercase;
-    color: var(--accent); margin-bottom: 10px; font-weight: 500;
-  }
+  .card:hover { border-color: var(--line-bright); }
   .card h3 { margin-bottom: 6px; }
   .card p { font-size: 13.5px; color: var(--ink-mute); margin: 0; line-height: 1.55; }
 
   /* Timeline */
-  .timeline { display: flex; flex-direction: column; gap: 0; }
-  .tl-item { position: relative; padding: 22px 0 22px 32px; border-bottom: 1px solid var(--line); }
+  .timeline { display: flex; flex-direction: column; }
+  .tl-item { position: relative; padding: 22px 0 22px 28px; border-bottom: 1px solid var(--line); }
   .tl-item:last-child { border-bottom: none; }
   .tl-item::before {
-    content: ""; position: absolute; left: 0; top: 28px;
-    width: 10px; height: 10px; border-radius: 50%;
+    content: ""; position: absolute; left: 0; top: 30px;
+    width: 8px; height: 8px; border-radius: 50%;
     background: var(--bg); border: 2px solid var(--accent);
-    box-shadow: 0 0 0 3px var(--bg), 0 0 8px var(--accent);
   }
   .tl-item::after {
-    content: ""; position: absolute; left: 4px; top: 42px; bottom: -22px;
+    content: ""; position: absolute; left: 3px; top: 42px; bottom: -22px;
     width: 2px; background: var(--line-strong);
   }
   .tl-item:last-child::after { display: none; }
   .tl-meta { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px; margin-bottom: 4px; }
   .tl-title { font-size: 17px; color: var(--ink); font-weight: 700; letter-spacing: -0.01em; }
   .tl-time {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase;
-    color: var(--accent); padding: 2px 8px;
-    border: 1px solid var(--accent-soft); border-radius: 4px;
-    background: var(--accent-tint); font-weight: 500;
+    font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase;
+    color: var(--ink-mute); font-weight: 600;
   }
   .tl-role { font-size: 13.5px; color: var(--ink-mute); margin-bottom: 6px; font-weight: 500; }
   .tl-summary { font-size: 14px; color: var(--ink-2); margin: 0; max-width: 70ch; }
@@ -271,84 +242,54 @@
   /* Experience */
   .exp-role {
     display: inline-flex; align-items: center; gap: 8px;
-    font-family: "JetBrains Mono", monospace;
-    font-size: 12px; color: var(--ink-mute); margin-bottom: 18px;
-    padding: 4px 10px;
-    border: 1px solid var(--line-strong); border-radius: 5px;
-    background: var(--panel); font-weight: 500;
+    font-size: 13px; color: var(--ink-mute); margin-bottom: 18px;
+    font-weight: 500;
   }
-  .exp-role .pill-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 6px var(--accent); }
+  .exp-role .pill-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
 
-  ul.bullets { list-style: none; padding: 0; margin: 22px 0 0; display: flex; flex-direction: column; gap: 8px; }
+  ul.bullets { list-style: none; padding: 0; margin: 20px 0 0; display: flex; flex-direction: column; gap: 7px; }
   ul.bullets li {
-    position: relative; padding-left: 22px;
+    position: relative; padding-left: 20px;
     font-size: 14.5px; color: var(--ink-2); line-height: 1.55;
   }
   ul.bullets li::before {
-    content: ""; position: absolute; left: 0; top: 9px;
-    width: 10px; height: 2px; background: var(--accent);
+    content: ""; position: absolute; left: 0; top: 10px;
+    width: 8px; height: 1.5px; background: var(--accent);
   }
 
   .exp-body { max-width: 72ch; }
   .exp-body p { font-size: 15.5px; color: var(--ink-2); }
 
   /* Influences */
-  .influence-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .influence-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
   .influence-card {
-    display: grid; grid-template-columns: auto 1fr; gap: 14px;
     padding: 18px 20px;
     background: var(--panel); border: 1px solid var(--line);
     border-radius: var(--radius);
-    transition: border-color 200ms ease, transform 200ms ease;
+    transition: border-color 180ms ease;
   }
-  .influence-card:hover { border-color: var(--line-bright); transform: translateY(-2px); }
-  .influence-mark {
-    display: flex; align-items: center; justify-content: center;
-    width: 36px; height: 36px; border-radius: 8px;
-    background: var(--accent-tint); border: 1px solid var(--accent-soft);
-    color: var(--accent); font-weight: 700; font-size: 13px;
-    font-family: "JetBrains Mono", monospace;
-  }
-  .influence-card h3 { font-size: 15.5px; margin-bottom: 4px; }
+  .influence-card:hover { border-color: var(--line-bright); }
+  .influence-card h3 { font-size: 15px; margin-bottom: 5px; }
   .influence-card p { font-size: 13px; color: var(--ink-mute); margin: 0; line-height: 1.55; }
 
   .influence-closing {
-    margin-top: 24px; padding: 18px 22px;
-    background: var(--panel); border-left: 3px solid var(--accent);
-    border-radius: 4px 8px 8px 4px;
-    font-size: 15.5px; line-height: 1.55; color: var(--ink);
-    max-width: 78ch; font-weight: 500;
+    margin-top: 20px; padding: 16px 20px;
+    background: var(--panel); border-left: 2px solid var(--accent);
+    border-radius: 2px 6px 6px 2px;
+    font-size: 15px; line-height: 1.6; color: var(--ink-2);
+    max-width: 74ch; font-weight: 500;
   }
 
   /* Pull quotes */
   .pull-quote {
-    margin: 22px 0; padding: 16px 0 16px 22px;
-    border-left: 3px solid var(--accent);
-    font-size: clamp(18px, 2vw, 22px); line-height: 1.4;
+    margin: 20px 0; padding: 14px 0 14px 20px;
+    border-left: 2px solid var(--accent);
+    font-size: clamp(17px, 1.8vw, 21px); line-height: 1.45;
     color: var(--ink); max-width: 60ch;
     font-weight: 500; letter-spacing: -0.015em; font-style: italic;
   }
-  .pull-quote::before { content: "\201C"; color: var(--accent); margin-right: 4px; font-style: normal; }
+  .pull-quote::before { content: "\201C"; color: var(--accent); margin-right: 3px; font-style: normal; }
   .pull-quote::after  { content: "\201D"; color: var(--accent); margin-left: 2px; font-style: normal; }
-
-  /* Resume */
-  .resume-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
-  .highlights {
-    list-style: none; margin: 22px 0 0; padding: 0;
-    display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 0;
-    border-top: 1px solid var(--line);
-  }
-  .highlights li {
-    padding: 11px 0; border-bottom: 1px solid var(--line);
-    font-size: 14px; color: var(--ink-2);
-    display: flex; align-items: center; gap: 10px;
-  }
-  .highlights li:nth-child(odd) { padding-right: 14px; }
-  .highlights li:nth-child(even) { padding-left: 14px; border-left: 1px solid var(--line); }
-  .highlights li::before {
-    content: ""; width: 5px; height: 5px; border-radius: 50%;
-    background: var(--accent); flex-shrink: 0; box-shadow: 0 0 6px var(--accent);
-  }
 
   /* Contact */
   .contact-rows { display: flex; flex-direction: column; margin: 6px 0 0; padding: 0; border-top: 1px solid var(--line); }
@@ -357,50 +298,49 @@
     padding: 12px 0; border-bottom: 1px solid var(--line); align-items: baseline;
   }
   .contact-row dt {
-    font-family: "JetBrains Mono", monospace;
     font-size: 11px; letter-spacing: 0.10em; text-transform: uppercase;
-    color: var(--ink-dim); font-weight: 500; margin: 0;
+    color: var(--ink-dim); font-weight: 600; margin: 0;
   }
   .contact-row dd { margin: 0; font-size: 14.5px; color: var(--ink); }
-  .contact-row dd a { color: var(--ink); border-bottom: 1px dashed var(--line-strong); padding-bottom: 1px; transition: color 160ms ease, border-color 160ms ease; }
+  .contact-row dd a { color: var(--ink); border-bottom: 1px solid var(--line-strong); padding-bottom: 1px; transition: color 150ms ease, border-color 150ms ease; }
   .contact-row dd a:hover { color: var(--accent); border-color: var(--accent); }
   .contact-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
 
   /* Footer */
   footer {
-    margin-top: 56px; padding: 32px 0 28px;
+    margin-top: 56px; padding: 28px 0;
     border-top: 1px solid var(--line);
     font-size: 13px; color: var(--ink-mute);
   }
   footer .foot-grid { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end; }
-  footer h4 { font-size: 15px; color: var(--ink); margin: 0 0 6px; font-weight: 700; letter-spacing: -0.01em; }
+  footer h4 { font-size: 15px; color: var(--ink); margin: 0 0 5px; font-weight: 700; letter-spacing: -0.01em; }
   footer .foot-tag { color: var(--ink-mute); max-width: 48ch; margin: 0; font-size: 13px; }
   footer .foot-links { display: flex; flex-wrap: wrap; gap: 18px; font-size: 12.5px; }
   footer .foot-links a { color: var(--ink-mute); }
   footer .foot-links a:hover { color: var(--accent); }
   footer .foot-bottom {
-    margin-top: 22px; padding-top: 14px; border-top: 1px solid var(--line);
-    font-size: 11.5px; color: var(--ink-dim);
-    font-family: "JetBrains Mono", monospace; letter-spacing: 0.06em;
+    margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--line);
+    font-size: 11.5px; color: var(--ink-dim); letter-spacing: 0.03em;
   }
 
-  a:focus-visible, .btn:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+  a:focus-visible, .btn:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 
   @media (max-width: 1100px) {
-    :root { --sidebar-w: 240px; }
-    .content { padding: 48px 36px 64px; }
+    :root { --sidebar-w: 200px; }
+    .content { padding: 44px 36px 64px; }
   }
   @media (max-width: 860px) {
     .layout { grid-template-columns: 1fr; }
     .sidebar { display: none; }
-    .topbar-inner { padding: 12px 18px; }
+    .topbar-inner { padding: 11px 18px; }
     .top-nav { display: none; }
+    .top-cred { display: none; }
     .top-cta .btn:not(.btn-accent) { display: none; }
     .mobile-toggle {
       display: inline-flex; align-items: center; justify-content: center;
       background: var(--panel); color: var(--ink);
       border: 1px solid var(--line-strong);
-      width: 36px; height: 36px; border-radius: 7px; cursor: pointer;
+      width: 36px; height: 36px; border-radius: 6px; cursor: pointer;
     }
     .mobile-toggle svg { width: 16px; height: 16px; }
     .mobile-menu {
@@ -410,24 +350,20 @@
     }
     .mobile-menu.open { display: block; }
     .mobile-menu .nav-group-label { padding: 8px 4px; }
-    .mobile-menu .nav a { padding: 9px 8px; font-size: 14.5px; }
-
-    .content { padding: 32px 20px 56px; }
-    section { padding: 44px 0; }
+    .mobile-menu .nav a { padding: 9px 6px; font-size: 14px; }
+    .content { padding: 28px 18px 52px; }
+    section { padding: 40px 0; }
     .hero-stats { grid-template-columns: 1fr; }
     .card-grid, .card-grid.three, .influence-list { grid-template-columns: 1fr; }
-    .highlights { grid-template-columns: 1fr; }
-    .highlights li:nth-child(even) { padding-left: 0; border-left: none; }
-    .highlights li:nth-child(odd) { padding-right: 0; }
-    .contact-row { grid-template-columns: 1fr; gap: 4px; }
+    .contact-row { grid-template-columns: 1fr; gap: 3px; }
     footer .foot-grid { grid-template-columns: 1fr; }
   }
 
-  .reveal { opacity: 0; transform: translateY(8px); animation: reveal 600ms ease forwards; }
+  .reveal { opacity: 0; transform: translateY(6px); animation: reveal 500ms ease forwards; }
   .reveal.d1 { animation-delay: 60ms; }
-  .reveal.d2 { animation-delay: 130ms; }
-  .reveal.d3 { animation-delay: 200ms; }
-  .reveal.d4 { animation-delay: 270ms; }
+  .reveal.d2 { animation-delay: 120ms; }
+  .reveal.d3 { animation-delay: 190ms; }
+  .reveal.d4 { animation-delay: 260ms; }
   @keyframes reveal { to { opacity: 1; transform: none; } }
   @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; animation: none; } }
 </style>
@@ -437,9 +373,8 @@
 <header class="topbar">
   <div class="topbar-inner">
     <div class="top-brand">
-      <div class="top-logo" aria-hidden="true">BC</div>
-      <div class="top-brand-text">Brendan Chick</div>
-      <span class="top-divider">/</span>
+      <span class="top-name">Brendan Chick, CSCS</span>
+      <span class="top-cred">Football Strength &amp; Conditioning</span>
       <nav class="top-nav" aria-label="Primary">
         <a href="#overview" class="active">Profile</a>
         <a href="#experience">Experience</a>
@@ -490,7 +425,6 @@
       <div class="nav-group-label">Connect</div>
       <nav class="nav">
         <ul>
-          
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -535,7 +469,6 @@
       <div class="nav-group-label">Connect</div>
       <nav class="nav">
         <ul>
-          
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -586,7 +519,7 @@
       </section>
 
       <section id="why-brendan" aria-labelledby="why-h">
-        <div class="sec-eyebrow"><code>02</code> Positioning</div>
+        <div class="sec-eyebrow">Positioning</div>
         <h2 id="why-h">Why Brendan</h2>
         <div class="exp-body" style="margin-bottom: 24px;">
           <p>Brendan brings a rare combination for a young strength coach: real Division I team responsibility, Power Conference football experience, and a work ethic built around service.</p>
@@ -594,32 +527,26 @@
         </div>
         <div class="card-grid three">
           <article class="card">
-            <div class="card-num">01 &mdash; Direction</div>
             <h3>Football-Focused Career Direction</h3>
             <p>Brendan is pursuing an Assistant Strength &amp; Conditioning role with a high-standard collegiate football program.</p>
           </article>
           <article class="card">
-            <div class="card-num">02 &mdash; Experience</div>
             <h3>Power Conference Football Experience</h3>
             <p>Brendan served as a full-time Strength &amp; Conditioning Intern with Virginia Football during the 2025 season, including bowl-season preparation.</p>
           </article>
           <article class="card">
-            <div class="card-num">03 &mdash; Responsibility</div>
             <h3>Division I Team Responsibility</h3>
             <p>At Mercer, Brendan leads strength and conditioning for Men&rsquo;s Soccer, Women&rsquo;s Lacrosse, and Women&rsquo;s Softball.</p>
           </article>
           <article class="card">
-            <div class="card-num">04 &mdash; Football</div>
             <h3>Football S&amp;C Support</h3>
             <p>Brendan assists with Mercer Football Strength &amp; Conditioning while continuing to build experience in a football performance environment.</p>
           </article>
           <article class="card">
-            <div class="card-num">05 &mdash; Results</div>
             <h3>Measurable Athlete Development</h3>
             <p>At Mercer, 90% of Men&rsquo;s Soccer athletes PR&rsquo;d bench press within 10 weeks between baseline and follow-up testing.</p>
           </article>
           <article class="card">
-            <div class="card-num">06 &mdash; Service</div>
             <h3>Relentless Availability</h3>
             <p>Brendan provides extra field work, individual weight room sessions, and athlete support outside scheduled team training.</p>
           </article>
@@ -627,7 +554,7 @@
       </section>
 
       <section id="experience" aria-labelledby="exp-h">
-        <div class="sec-eyebrow"><code>03</code> Experience</div>
+        <div class="sec-eyebrow">Experience</div>
         <h2 id="exp-h">Experience Snapshot</h2>
         <div class="exp-body" style="margin-bottom: 12px;">
           <p>Brendan&rsquo;s path has been shaped by football strength and conditioning, Division I team responsibility, and a commitment to learning from serious training environments.</p>
@@ -653,7 +580,7 @@
       </section>
 
       <section id="virginia-football" aria-labelledby="uva-h">
-        <div class="sec-eyebrow"><code>04</code> Power Conference Football</div>
+        <div class="sec-eyebrow">Power Conference Football</div>
         <h2 id="uva-h">University of Virginia Football</h2>
         <div class="exp-role"><span class="pill-dot"></span>S&amp;C Intern &middot; 2025 Season &middot; Full-Time</div>
         <div class="exp-body">
@@ -673,7 +600,7 @@
       </section>
 
       <section id="mercer" aria-labelledby="mercer-h">
-        <div class="sec-eyebrow"><code>05</code> Current Role</div>
+        <div class="sec-eyebrow">Current Role</div>
         <h2 id="mercer-h">Mercer University</h2>
         <div class="exp-role"><span class="pill-dot"></span>Graduate Assistant Strength &amp; Conditioning Coach &middot; Current</div>
         <div class="exp-body">
@@ -696,7 +623,7 @@
       </section>
 
       <section id="brockport" aria-labelledby="brock-h">
-        <div class="sec-eyebrow"><code>06</code> Foundation</div>
+        <div class="sec-eyebrow">Foundation</div>
         <h2 id="brock-h">SUNY Brockport</h2>
         <div class="exp-role"><span class="pill-dot"></span>Volunteer Assistant &mdash; Football S&amp;C &middot; 1.5 Years</div>
         <div class="exp-body">
@@ -714,7 +641,7 @@
       </section>
 
       <section id="athlete-development" aria-labelledby="dev-h">
-        <div class="sec-eyebrow"><code>07</code> Development</div>
+        <div class="sec-eyebrow">Development</div>
         <h2 id="dev-h">Athlete Development</h2>
         <div class="exp-body" style="margin-bottom: 24px;">
           <p>At Mercer, Brendan has been responsible for developing athletes across multiple Division I sports while continuing to assist with Football Strength &amp; Conditioning.</p>
@@ -724,17 +651,17 @@
           <p>That responsibility is preparing him for his long-term goal: contributing to a high-level football strength and conditioning staff.</p>
         </div>
         <div class="card-grid three">
-          <article class="card"><div class="card-num">Priority 01</div><h3>Strength</h3><p>Build usable strength that supports sport performance, confidence, and durability.</p></article>
-          <article class="card"><div class="card-num">Priority 02</div><h3>Speed</h3><p>Develop acceleration, sprint exposure, and field qualities that transfer to competition.</p></article>
-          <article class="card"><div class="card-num">Priority 03</div><h3>Power</h3><p>Train athletes to express force quickly and confidently.</p></article>
-          <article class="card"><div class="card-num">Priority 04</div><h3>Durability</h3><p>Prepare athletes to handle practice, competition, travel, and long seasons.</p></article>
-          <article class="card"><div class="card-num">Priority 05</div><h3>Confidence</h3><p>Give athletes a training process they can trust and progress they can see.</p></article>
-          <article class="card"><div class="card-num">Priority 06</div><h3>Accountability</h3><p>Create an environment where effort, detail, and consistency are expected every day.</p></article>
+          <article class="card"><h3>Strength</h3><p>Build usable strength that supports sport performance, confidence, and durability.</p></article>
+          <article class="card"><h3>Speed</h3><p>Develop acceleration, sprint exposure, and field qualities that transfer to competition.</p></article>
+          <article class="card"><h3>Power</h3><p>Train athletes to express force quickly and confidently.</p></article>
+          <article class="card"><h3>Durability</h3><p>Prepare athletes to handle practice, competition, travel, and long seasons.</p></article>
+          <article class="card"><h3>Confidence</h3><p>Give athletes a training process they can trust and progress they can see.</p></article>
+          <article class="card"><h3>Accountability</h3><p>Create an environment where effort, detail, and consistency are expected every day.</p></article>
         </div>
       </section>
 
       <section id="philosophy" aria-labelledby="phil-h">
-        <div class="sec-eyebrow"><code>08</code> Philosophy</div>
+        <div class="sec-eyebrow">Philosophy</div>
         <h2 id="phil-h">Football Strength &amp; Conditioning Philosophy</h2>
         <div class="exp-body">
           <p>Brendan&rsquo;s long-term goal is to work in football strength and conditioning at the highest level.</p>
@@ -747,7 +674,7 @@
       </section>
 
       <section id="influences" aria-labelledby="inf-h">
-        <div class="sec-eyebrow"><code>09</code> Influences</div>
+        <div class="sec-eyebrow">Influences</div>
         <h2 id="inf-h">Influences</h2>
         <div class="exp-body" style="margin-bottom: 24px;">
           <p>Brendan is early in his career, and he takes pride in being a student of the profession.</p>
@@ -756,19 +683,19 @@
           <p>What Brendan has taken from them is not one exact model, but a set of principles: organize training intelligently, manage stress, develop speed, build strength, coach with intent, and serve the team.</p>
         </div>
         <div class="influence-list">
-          <div class="influence-card"><div class="influence-mark">AS</div><div><h3>Coach Adam Smotherman</h3><p>Power Conference football standard, daily execution, staff alignment, and football weight room culture.</p></div></div>
-          <div class="influence-card"><div class="influence-mark">BM</div><div><h3>Buddy Morris</h3><p>Football preparation, stress management, training economy, and long-term athlete development.</p></div></div>
-          <div class="influence-card"><div class="influence-mark">DT</div><div><h3>Dave Tate</h3><p>Strength culture, coaching lifters, intent, and building a serious training environment.</p></div></div>
-          <div class="influence-card"><div class="influence-mark">JS</div><div><h3>James &ldquo;The Thinker&rdquo; Smith</h3><p>Physical preparation, planning, sport demands, and the deeper responsibility of preparing athletes for competition.</p></div></div>
-          <div class="influence-card"><div class="influence-mark">DP</div><div><h3>Dan Pfaff</h3><p>Speed, power, movement, technical detail, and the art of coaching.</p></div></div>
-          <div class="influence-card"><div class="influence-mark">JK</div><div><h3>Joe Kenn</h3><p>Football strength systems, organization, practical training, and developing athletes who are prepared for the demands of the game.</p></div></div>
-          <div class="influence-card" style="grid-column: 1 / -1;"><div class="influence-mark">CF</div><div><h3>Charlie Francis</h3><p>Sprint development, high-low organization, speed training, and managing training stress.</p></div></div>
+          <div class="influence-card"><h3>Coach Adam Smotherman</h3><p>Power Conference football standard, daily execution, staff alignment, and football weight room culture.</p></div>
+          <div class="influence-card"><h3>Buddy Morris</h3><p>Football preparation, stress management, training economy, and long-term athlete development.</p></div>
+          <div class="influence-card"><h3>Dave Tate</h3><p>Strength culture, coaching lifters, intent, and building a serious training environment.</p></div>
+          <div class="influence-card"><h3>James &ldquo;The Thinker&rdquo; Smith</h3><p>Physical preparation, planning, sport demands, and the deeper responsibility of preparing athletes for competition.</p></div>
+          <div class="influence-card"><h3>Dan Pfaff</h3><p>Speed, power, movement, technical detail, and the art of coaching.</p></div>
+          <div class="influence-card"><h3>Joe Kenn</h3><p>Football strength systems, organization, practical training, and developing athletes who are prepared for the demands of the game.</p></div>
+          <div class="influence-card" style="grid-column: 1 / -1;"><h3>Charlie Francis</h3><p>Sprint development, high-low organization, speed training, and managing training stress.</p></div>
         </div>
         <p class="influence-closing">Brendan does not believe in copying one coach or one system. He believes in studying deeply, applying practically, and adjusting to the athletes, staff, and sport in front of him.</p>
       </section>
 
       <section id="work-ethic" aria-labelledby="we-h">
-        <div class="sec-eyebrow"><code>10</code> Standard</div>
+        <div class="sec-eyebrow">Standard</div>
         <h2 id="we-h">Work Ethic</h2>
         <p class="pull-quote" style="margin-top:0;">The standard is built every day.</p>
         <div class="exp-body">
@@ -784,7 +711,7 @@
       </section>
 
       <section id="contact" aria-labelledby="contact-h">
-        <div class="sec-eyebrow"><code>12</code> Contact</div>
+        <div class="sec-eyebrow">Contact</div>
         <h2 id="contact-h">Contact Brendan</h2>
         <div class="exp-body">
           <p>Brendan is actively pursuing an Assistant Strength &amp; Conditioning opportunity with a high-standard collegiate football program.</p>
@@ -797,7 +724,6 @@
           <div class="contact-row"><dt>Role</dt><dd>Football-Focused Strength &amp; Conditioning Coach</dd></div>
           <div class="contact-row"><dt>Education</dt><dd>B.S. Exercise Science</dd></div>
           <div class="contact-row"><dt>Email</dt><dd><a href="mailto:brendochick13@gmail.com">brendochick13@gmail.com</a></dd></div>
-          <!-- TODO: insert real phone -->
           <div class="contact-row"><dt>Phone</dt><dd><a href="tel:8452648174">845-264-8174</a></dd></div>
         </dl>
         <div class="contact-cta">
@@ -809,14 +735,13 @@
         <div class="foot-grid">
           <div>
             <h4>Brendan Chick, CSCS</h4>
-            <p style="margin:0 0 6px; color:var(--ink-mute); font-size:13px;">Football-Focused Strength &amp; Conditioning Coach</p>
+            <p style="margin:0 0 5px; color:var(--ink-mute); font-size:13px;">Football-Focused Strength &amp; Conditioning Coach</p>
             <p class="foot-tag">Division I team responsibility. Power Conference football experience. Relentless work ethic.</p>
           </div>
           <nav class="foot-links" aria-label="Footer">
             <a href="#overview">Overview</a>
             <a href="#experience">Experience</a>
             <a href="#philosophy">Philosophy</a>
-            
             <a href="#contact">Contact</a>
           </nav>
         </div>
